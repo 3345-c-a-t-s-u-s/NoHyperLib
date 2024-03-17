@@ -8,7 +8,7 @@ local NoHyper = require(script:WaitForChild('ModuleScript'))
 
 NoHyper.set_theme('nohyper') -- [[nohyper , bedol , neverlose, green]]
 
-local Window = NoHyper.new('Hello, NoHyper',"rbxassetid://16763260622",'Welcome back!') -- My Logo you replace it
+local Window = NoHyper.new('Hello, NoHyper',"rbxassetid://16763260622",'Welcome back!') -- My Logo you can replace it
 
 Window:AddYoutube('https://www.youtube.com/your-youtube-channel')
 Window:AddWebsite('https://example.com/your-website')
