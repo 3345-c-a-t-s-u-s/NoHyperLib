@@ -4,7 +4,7 @@
 
 ## Example
 ```lua
-local NoHyper = require(script:WaitForChild('ModuleScript'))
+local NoHyper = loadstring(game:HttpGet('https://raw.githubusercontent.com/3345-c-a-t-s-u-s/NoHyperLib/main/source.dll'))()
 
 NoHyper.set_theme('nohyper') -- [[nohyper , bedol , neverlose, green]]
 
