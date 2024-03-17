@@ -1,7 +1,7 @@
 # Hello, NoHyper
 
 ## Example
-```luau
+```lua
 local NoHyper = loadstring(game:HttpGet('https://raw.githubusercontent.com/3345-c-a-t-s-u-s/NoHyperLib/main/source.dll'))()
 local Window = NoHyper.new('Hello, NoHyper',nil--[[YOU'RE LOGO - RBX]],'Welcome back!')
 
