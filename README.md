@@ -3,7 +3,7 @@
 ## Example
 ```lua
 local NoHyper = loadstring(game:HttpGet('https://raw.githubusercontent.com/3345-c-a-t-s-u-s/NoHyperLib/main/source.dll'))()
-local Window = NoHyper.new('Hello, NoHyper',nil--[[YOU'RE LOGO - RBX]],'Welcome back!')
+local Window = NoHyper.new('Hello, NoHyper',nil--[[YOUR LOGO - RBX]],'Welcome back!')
 
 Window:AddYoutube('https://www.youtube.com/your-youtube-channel')
 Window:AddWebsite('https://example.com/your-website')
