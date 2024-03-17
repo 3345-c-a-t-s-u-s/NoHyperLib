@@ -2,15 +2,20 @@
 
 ## Example
 ```lua
-local NoHyper = loadstring(game:HttpGet('https://raw.githubusercontent.com/3345-c-a-t-s-u-s/NoHyperLib/main/source.dll'))()
-local Window = NoHyper.new('Hello, NoHyper',nil--[[YOUR LOGO - RBX]],'Welcome back!')
+local NoHyper = require(script:WaitForChild('ModuleScript'))
+
+NoHyper.set_theme('nohyper') -- [[nohyper , bedol , neverlose, green]]
+
+local Window = NoHyper.new('Hello, NoHyper',"rbxassetid://16763260622",'Welcome back!') -- My Logo you replace it
 
 Window:AddYoutube('https://www.youtube.com/your-youtube-channel')
 Window:AddWebsite('https://example.com/your-website')
 Window:AddDiscord('https://discord.gg/your-discord')
 
 local General = Window:NewTab('General','earth') -- [[Icon: ads list folder earth locked home positon notify close color]]
+local Setting = Window:NewTab('Setting','list')
 local Example = General:NewSection('Example','positon','left') -- [left , right]
+local RightSection = General:NewSection('Section','ads','right')
 
 Example:AddButton('Example',function()
 	print('click!')
@@ -30,5 +35,17 @@ end)
 
 Example:AddDropdown('Dropdown',{1,2,3,4,5,6,7,8,9,10},5,function(value)
 	print('select ',value)
+end)
+
+RightSection:AddToggle('Aimbot',false,function(...)
+	print('Boolen: ',...)
+end)
+
+RightSection:AddToggle('Esp',false,function(...)
+	print('Boolen: ',...)
+end)
+
+RightSection:AddToggle('XRay',false,function(...)
+	print('Boolen: ',...)
 end)
 ```
