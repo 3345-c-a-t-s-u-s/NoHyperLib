@@ -4,11 +4,12 @@
 
 ## Example
 ```lua
-local NoHyper = loadstring(game:HttpGet('https://raw.githubusercontent.com/3345-c-a-t-s-u-s/NoHyperLib/main/source.dll'))()
+local NoHyper = require(script:WaitForChild('ModuleScript'))
 
 NoHyper.set_theme('nohyper') -- [[nohyper , bedol , neverlose, green]]
 
-local Window = NoHyper.new('Hello, NoHyper',"rbxassetid://16763260622",'Welcome back!') -- My Logo you can replace it
+local Window = NoHyper.new('Hello, '..game.Players.LocalPlayer.DisplayName,"rbxassetid://16763260622",'Welcome back!') -- My Logo you can replace it
+Window:NewSize(UDim2.new(0.1,430,0.1,300))
 
 Window:AddYoutube('https://www.youtube.com/your-youtube-channel')
 Window:AddWebsite('https://example.com/your-website')
@@ -18,6 +19,11 @@ local General = Window:NewTab('General','earth') -- [[Icon: ads list folder eart
 local Setting = Window:NewTab('Setting','list')
 local Example = General:NewSection('Example','positon','left') -- [left , right]
 local RightSection = General:NewSection('Section','ads','right')
+local SettingSection = Setting:NewSection('Settings','crown','left')
+
+SettingSection:AddToggle('Auto Save',false,function(v)
+	print('auto save: ',v)
+end)
 
 Example:AddButton('Example',function()
 	print('click!')
