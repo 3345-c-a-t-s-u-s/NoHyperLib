@@ -1,4 +1,4 @@
--- [Original by NoHyper : CSGO Cheat : discord.gg/ZMqsPVScAn]
+-- [Original by Hyperion : CSGO Cheat]
 
 if not game:IsLoaded() then
 	game.Loaded:Wait()
@@ -90,60 +90,121 @@ local function SetImage(name:string,image:ImageLabel)
 		image.Image = NigImage
 		image.ImageRectOffset = Vector2.new(205,565)
 		image.ImageRectSize = Vector2.new(35,35)
+		return
 	end
 
 	if name == "list" then
 		image.Image = NigImage
 		image.ImageRectOffset = Vector2.new(485,205)
 		image.ImageRectSize = Vector2.new(35,35)
+		return
 	end
 
 	if name == "folder" then
 		image.Image = NigImage
 		image.ImageRectOffset = Vector2.new(805,45)
 		image.ImageRectSize = Vector2.new(35,35)
+		return
 	end
 
 	if name == "earth" then
 		image.Image = NigImage
 		image.ImageRectOffset = Vector2.new(604,324)
 		image.ImageRectSize = Vector2.new(35,35)
+		return
 	end
 
 	if name == "locked" then
 		image.Image = NigImage
 		image.ImageRectOffset = Vector2.new(524, 644)
 		image.ImageRectSize = Vector2.new(35,35)
+		return
 	end
 
 	if name == "home" then
 		image.Image = NigImage
 		image.ImageRectOffset = Vector2.new(964, 205)
 		image.ImageRectSize = Vector2.new(35,35)
+		return
 	end
 
 	if name == "positon" or name == 'gps' then
 		image.Image = NigImage
 		image.ImageRectOffset = Vector2.new(325, 565)
 		image.ImageRectSize = Vector2.new(35,35)
+		return
 	end
 
 	if name == "notify" or name == 'notification' then
 		image.Image = NigImage
 		image.ImageRectOffset = Vector2.new(325, 565)
 		image.ImageRectSize = Vector2.new(35,35)
+		return
 	end
 
 	if name == "close" or name == 'no' then
 		image.Image = NigImage
 		image.ImageRectOffset = Vector2.new(284, 4)
 		image.ImageRectSize = Vector2.new(24, 24)
+		return
 	end
 
 	if name == "color" then
 		image.Image = NigImage
 		image.ImageRectOffset = Vector2.new(44, 964)
 		image.ImageRectSize = Vector2.new(36, 36)
+		return
+	end
+	
+	image.ImageRectOffset = Vector2.new(0,0)
+	image.ImageRectSize = Vector2.new(0,0)
+	
+	if name == "settings" then
+		image.Image = "rbxassetid://7734053495"
+	end
+	
+	if name == "smartphone" then
+		image.Image = "rbxassetid://7734058979"
+	end
+	
+	if name == "crown" then
+		image.Image = "rbxassetid://7733765398"
+	end
+	
+	if name == "save" then
+		image.Image = "rbxassetid://7734052335"
+	end
+	
+	if name == "hash" then
+		image.Image = "rbxassetid://7733955740"
+	end
+	
+	if name == "server" then
+		image.Image = "rbxassetid://7734053426"
+	end
+	
+	if name == "option" then
+		image.Image = "rbxassetid://7734021300"
+	end
+	
+	if name == "link" then
+		image.Image = "rbxassetid://7733978098"
+	end
+	
+	if name == "copy" then
+		image.Image = "rbxassetid://7733764083"
+	end
+	
+	if name == "cpu" then
+		image.Image = "rbxassetid://7733765045"
+	end
+	
+	if name == "moon" then
+		image.Image = "rbxassetid://7743870134"
+	end
+	
+	if name == "wallet" then
+		image.Image = "rbxassetid://7743877573"
 	end
 end
 
@@ -151,6 +212,7 @@ end
 function NoHyper.new(WindowName,WindowLogo,WindowDescription)
 	local HyperWindow = {
 		Tabs = {},
+		Size = UDim2.new(0.230000004, 350, 0.25, 250),
 		Toggle = Enum.KeyCode.LeftControl
 	}
 
@@ -181,13 +243,13 @@ function NoHyper.new(WindowName,WindowLogo,WindowDescription)
 	local View = Instance.new("Frame")
 	local UICorner_2 = Instance.new("UICorner")
 	local UICorner_3 = Instance.new("UICorner")
-	
+
 	NoHyperUI:GetPropertyChangedSignal('Enabled'):Connect(function()
 		if not NoHyperUI.Enabled then
 			NoHyperUI.Enabled = true
 		end
 	end)
-	
+
 	HyperWindow.ScreenSource = NoHyperUI
 
 	NoHyperUI.Name = "NoHyperUI: "..tostring(WindowName)
@@ -205,7 +267,7 @@ function NoHyper.new(WindowName,WindowLogo,WindowDescription)
 	MainFrame.BorderSizePixel = 0
 	MainFrame.ClipsDescendants = true
 	MainFrame.Position = UDim2.new(0.5, 0, 0.5, 0)
-	MainFrame.Size = UDim2.new(0.230000004, 350, 0.25, 250)
+	MainFrame.Size = HyperWindow.Size
 	MainFrame.Active = true
 
 	Frame.Parent = MainFrame
@@ -215,7 +277,7 @@ function NoHyper.new(WindowName,WindowLogo,WindowDescription)
 	Frame.Size = UDim2.new(1, 0, 1, 0)
 	Frame.Position = UDim2.fromScale(-1,0)
 	Frame.ClipsDescendants = true
-	
+
 	UICorner.Parent = Frame
 
 	Contact.Name = "Contact"
@@ -343,7 +405,7 @@ function NoHyper.new(WindowName,WindowLogo,WindowDescription)
 	LogoHub.Image = tostring(WindowLogo)
 	LogoHub.ScaleType = Enum.ScaleType.Fit
 	LogoHub.ImageTransparency = 1
-	
+
 	MainText.Name = "MainText"
 	MainText.Parent = Top
 	MainText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -361,7 +423,7 @@ function NoHyper.new(WindowName,WindowLogo,WindowDescription)
 	MainText.TextWrapped = true
 	MainText.TextXAlignment = Enum.TextXAlignment.Left
 	MainText.TextTransparency = 1
-	
+
 	DescriptionText.Name = "DescriptionText"
 	DescriptionText.Parent = Top
 	DescriptionText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -409,7 +471,7 @@ function NoHyper.new(WindowName,WindowLogo,WindowDescription)
 			ImageTransparency = 0.5,
 		}):Play()	
 	end)
-	
+
 	-- Items
 	delay(0.5,function()
 		Tween:Create(CloseButton,TweenInfo.new(0.5),{
@@ -443,7 +505,7 @@ function NoHyper.new(WindowName,WindowLogo,WindowDescription)
 			Position = UDim2.new(0.125, 0, 0.934000015, 0)
 		}):Play()
 	end)
-	
+
 	CloseButton.ImageTransparency = 1
 	CloseButton.Name = "CloseButton"
 	CloseButton.Parent = Frame
@@ -457,7 +519,7 @@ function NoHyper.new(WindowName,WindowLogo,WindowDescription)
 	CloseButton.SizeConstraint = Enum.SizeConstraint.RelativeYY
 	CloseButton.ZIndex = 8
 	CloseButton.Image = "rbxassetid://10002398990"
-	
+
 	TickUI.BackgroundTransparency = 1
 	TickUI.Name = "TickUI"
 	TickUI.Parent = Frame
@@ -469,7 +531,7 @@ function NoHyper.new(WindowName,WindowLogo,WindowDescription)
 	TickUI.Position = UDim2.new(0.25, 0, 0.5, 0)
 	TickUI.Size = UDim2.new(0, 1, 1, 0)
 	TickUI.ZIndex = 3
-	
+
 	View.BackgroundTransparency = 1
 	View.Name = "View"
 	View.Parent = TickUI
@@ -786,11 +848,11 @@ function NoHyper.new(WindowName,WindowLogo,WindowDescription)
 			UIStroke.Parent = Section
 
 			function Section_Hyper.update()
-				local old = (35) + 1
+				local old = 1
 
 				for i,v in ipairs(Section:GetChildren()) do
 					if v:IsA('Frame') then
-						old += (v.AbsoluteSize.Y or 27) + 0.5
+						old += (v.AbsoluteSize.Y or 27) + UIListLayout.Padding.Offset
 					end
 				end
 
@@ -1176,7 +1238,7 @@ function NoHyper.new(WindowName,WindowLogo,WindowDescription)
 				local function UpdateText()
 					local t= BindKey.Text
 					local siz = TextService:GetTextSize(t,BindKey.TextSize,BindKey.Font,Vector2.new(math.huge,math.huge))
-					Tween:Create(Bind,TweenInfo.new(0.075),{Size = UDim2.new(0,siz.X + 3,0.65,0)}):Play()
+					Tween:Create(Bind,TweenInfo.new(0.075),{Size = UDim2.new(0,siz.X,0.65,0)}):Play()
 				end
 
 				UpdateText()
@@ -1309,8 +1371,9 @@ function NoHyper.new(WindowName,WindowLogo,WindowDescription)
 				Ui.BorderSizePixel = 0
 				Ui.Position = UDim2.new(0.949999869, 0, 0.500000417, 0)
 				Ui.Size = UDim2.new(0.44600001, 0, 0.324999988, 0)
-				Ui.ZIndex = 7
-
+				Ui.ZIndex = 10
+				Ui.Active = true
+				
 				UICorner.CornerRadius = UDim.new(0, 4)
 				UICorner.Parent = Ui
 
@@ -1320,7 +1383,7 @@ function NoHyper.new(WindowName,WindowLogo,WindowDescription)
 				SLIDE.BorderColor3 = Color3.fromRGB(0, 0, 0)
 				SLIDE.BorderSizePixel = 0
 				SLIDE.Size = UDim2.new(0.462937713, 0, 1, 0)
-				SLIDE.ZIndex = 7
+				SLIDE.ZIndex = 11
 
 				UICorner_2.CornerRadius = UDim.new(0, 4)
 				UICorner_2.Parent = SLIDE
@@ -1333,7 +1396,7 @@ function NoHyper.new(WindowName,WindowLogo,WindowDescription)
 				Frame.Position = UDim2.new(1.075, 0, 0, 0)
 				Frame.Size = UDim2.new(1, 0, 1, 0)
 				Frame.SizeConstraint = Enum.SizeConstraint.RelativeYY
-				Frame.ZIndex = 9
+				Frame.ZIndex = 12
 
 				UICorner_3.CornerRadius = UDim.new(0, 4)
 				UICorner_3.Parent = Frame
@@ -1581,7 +1644,7 @@ function NoHyper.new(WindowName,WindowLogo,WindowDescription)
 				Drop.Visible = false
 				Drop.ZIndex = 16
 				Drop.Active = true
-				
+
 				UICorner_3.CornerRadius = UDim.new(0, 4)
 				UICorner_3.Parent = Drop
 
@@ -1594,17 +1657,17 @@ function NoHyper.new(WindowName,WindowLogo,WindowDescription)
 				UIListLayout.Padding = UDim.new(0, 5)
 
 				local function valshopw()
-					local old = 27
+					local old = 1
 
 					for i,v in ipairs(Drop:GetChildren()) do
 						if v:IsA('TextButton') then
-							old += (v.AbsoluteSize.Y or 27) + 3
+							old += (v.AbsoluteSize.Y or 27) + UIListLayout.Padding.Offset
 						end
 					end
 
-					return old + 10
+					return old + 1
 				end
-				
+
 				Drop:GetPropertyChangedSignal('Size'):Connect(function()
 					if Drop.Size.Y.Offset <= 15 then
 						Drop.Visible = false
@@ -1612,7 +1675,7 @@ function NoHyper.new(WindowName,WindowLogo,WindowDescription)
 						Drop.Visible = true
 					end
 				end)
-				
+
 				local function Toggle(vla)
 					if vla then
 						Iconcc.Image = UP
@@ -1669,15 +1732,6 @@ function NoHyper.new(WindowName,WindowLogo,WindowDescription)
 
 					UICorner.CornerRadius = UDim.new(0, 2)
 					UICorner.Parent = Frame
-
-					Frame_2.Parent = Button
-					Frame_2.AnchorPoint = Vector2.new(0, 1)
-					Frame_2.BackgroundColor3 = Color3.fromRGB(102, 111, 126)
-					Frame_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
-					Frame_2.BorderSizePixel = 0
-					Frame_2.Position = UDim2.new(0, 0, 1, 0)
-					Frame_2.Size = UDim2.new(1, 0, 0.095, 0)
-					Frame_2.ZIndex = 20
 
 					return Button,Frame
 				end
@@ -1778,7 +1832,12 @@ function NoHyper.new(WindowName,WindowLogo,WindowDescription)
 
 		return TabHyper
 	end
-
+	
+	function HyperWindow:NewSize(v)
+		HyperWindow.Size = v
+		MainFrame.Size = v
+	end
+	
 	function HyperWindow:AddYoutube(Link:string)
 		if Link:find('https://') then
 			YoutubeButton.Visible = true
@@ -1832,10 +1891,14 @@ function NoHyper.new(WindowName,WindowLogo,WindowDescription)
 
 		if val then
 			Tween:Create(MainFrame,TweenInfo.new(tim),{
-				Size = UDim2.new(0.230000004, 350, 0.25, 250),
+				Size = HyperWindow.Size,
 				Position = UDim2.fromScale(0.5,0.5)
 			}):Play()
-
+			
+			Tween:Create(CloseButton,TweenInfo.new(tim),{
+				ImageTransparency = 0.1
+			}):Play()
+			
 			Tween:Create(Top,TweenInfo.new(tim),{
 				Size = UDim2.new(1.00000012, 0, 0.139001563, 0)
 			}):Play()
@@ -1868,8 +1931,12 @@ function NoHyper.new(WindowName,WindowLogo,WindowDescription)
 				Position = UDim2.new(0.270000011, 0, 0.125, 0)
 			}):Play()
 		else
+			Tween:Create(CloseButton,TweenInfo.new(tim),{
+				ImageTransparency = 1
+			}):Play()
+			
 			Tween:Create(MainFrame,TweenInfo.new(tim),{
-				Size = UDim2.fromScale(0.179,0.1),
+				Size = UDim2.new(0.1,100,0.1,50),
 			}):Play()
 
 			Tween:Create(Top,TweenInfo.new(tim * 1.5),{
