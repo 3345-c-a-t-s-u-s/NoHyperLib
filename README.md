@@ -1,6 +1,5 @@
 # Hello, NoHyper
-![Real](https://github.com/3345-c-a-t-s-u-s/NoHyperLib/assets/117000269/acb192b2-b8c5-4b32-9ad8-e8932faa32aa)
-![reala](https://github.com/3345-c-a-t-s-u-s/NoHyperLib/assets/117000269/b1c5eb95-33e7-4493-9cef-ffada36c04c1)
+![REAL (2)](https://github.com/3345-c-a-t-s-u-s/NoHyperLib/assets/117000269/c2cc249c-ed95-4d99-84ad-f432ed6698da)
 
 ## Example
 ```lua
